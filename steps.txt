@@ -1,0 +1,58 @@
+On terminal:
+    flutter create walletappui
+
+
+Copy icons folder to lib
+
+
+File pubspec.yaml change lines 62 and 63:
+  assets:
+    - lib/icons/
+
+
+On terminal:
+    Flutter run
+
+
+Change file main.dart:
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
+}
+
+
+Inside lib create folder pages
+
+
+Inside pages create file home_page.dart:
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+    );
+  }
+}
+
